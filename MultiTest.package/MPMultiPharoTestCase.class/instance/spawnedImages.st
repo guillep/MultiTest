@@ -1,0 +1,4 @@
+accessing
+spawnedImages
+	
+	^ role spawnedImages

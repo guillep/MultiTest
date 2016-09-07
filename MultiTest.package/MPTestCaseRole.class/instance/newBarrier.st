@@ -1,0 +1,4 @@
+events
+newBarrier
+
+	self subclassResponsibility

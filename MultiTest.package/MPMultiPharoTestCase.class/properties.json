@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"role" ],
+	"name" : "MPMultiPharoTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,17 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"testCase",
+		"server",
+		"slaves",
+		"deferredActions" ],
+	"name" : "MPTestMaster",
+	"pools" : [
+		 ],
+	"super" : "MPTestCaseRole",
+	"type" : "normal" }

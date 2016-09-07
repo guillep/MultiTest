@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MPTestMasterBarrier",
+	"pools" : [
+		 ],
+	"super" : "MPTestBarrier",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MPTestResult",
+	"pools" : [
+		 ],
+	"super" : "TestResult",
+	"type" : "normal" }

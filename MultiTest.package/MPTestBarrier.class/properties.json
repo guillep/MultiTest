@@ -1,0 +1,17 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"semaphore",
+		"isSignaled",
+		"barrierId",
+		"testCaseRole" ],
+	"name" : "MPTestBarrier",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

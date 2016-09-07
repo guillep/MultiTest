@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"barriers" ],
+	"name" : "MPTestCaseRole",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

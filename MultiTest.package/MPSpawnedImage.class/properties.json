@@ -1,0 +1,21 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"location",
+		"process",
+		"vmLocation",
+		"slaveProxy",
+		"errors",
+		"deferredActions",
+		"id",
+		"testMaster" ],
+	"name" : "MPSpawnedImage",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
