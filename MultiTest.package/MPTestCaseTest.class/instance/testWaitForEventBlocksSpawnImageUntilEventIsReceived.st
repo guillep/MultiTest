@@ -1,4 +1,4 @@
-tests
+test-barriers
 testWaitForEventBlocksSpawnImageUntilEventIsReceived
 	
 	| parent |
@@ -16,6 +16,5 @@ testWaitForEventBlocksSpawnImageUntilEventIsReceived
 	
 	self localDo: [
 		self waitFor: #asserted.
-		self halt.
 		(parent / 'file') ensureDelete.
 	].

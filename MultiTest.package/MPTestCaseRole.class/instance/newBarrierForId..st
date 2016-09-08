@@ -1,4 +1,6 @@
 events
 newBarrierForId: anEvent
 
-	self subclassResponsibility
+	^ MPTestBarrier new
+		barrierId: anEvent;
+		testCaseRole: self

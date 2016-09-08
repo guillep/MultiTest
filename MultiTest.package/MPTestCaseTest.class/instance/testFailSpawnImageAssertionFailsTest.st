@@ -1,4 +1,4 @@
-tests
+test-assertions
 testFailSpawnImageAssertionFailsTest
 	<expectedFailure>
 	

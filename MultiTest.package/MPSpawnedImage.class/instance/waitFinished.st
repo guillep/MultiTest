@@ -1,4 +1,4 @@
 accessing
-wait
+waitFinished
 
 	process waitForExitPollingEvery: 100 milliSeconds

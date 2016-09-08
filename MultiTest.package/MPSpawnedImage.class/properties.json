@@ -13,7 +13,8 @@
 		"errors",
 		"deferredActions",
 		"id",
-		"testMaster" ],
+		"testMaster",
+		"startedSemaphore" ],
 	"name" : "MPSpawnedImage",
 	"pools" : [
 		 ],

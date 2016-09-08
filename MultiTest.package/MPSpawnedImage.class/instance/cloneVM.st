@@ -2,14 +2,12 @@ accessing
 cloneVM
 
 	self location ensureCreateDirectory.
+	self vmLocation ensureCreateDirectory.
 	
-	vmLocation := self location / 'vm'.
-	vmLocation ensureCreateDirectory.
-	
-	FileLocator vmDirectory resolve asAbsolute copyAllTo: vmLocation resolve asAbsolute.
+	FileLocator vmDirectory resolve asAbsolute copyAllTo: self vmLocation resolve asAbsolute.
 	
 	OSSUnixSubprocess new
 		command: 'chmod';
-		arguments: { '+x' . (vmLocation / 'pharo') fullNameWithIndicator };
+		arguments: { '+x' . self vmBinary fullNameWithIndicator };
 		redirectStdout;
 		runAndWaitPollingEvery: 50 milliSeconds doing: [  ] onExitDo: []

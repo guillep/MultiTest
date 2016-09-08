@@ -1,4 +1,4 @@
 accessing
 cloneImage
 
-	^ Smalltalk backupTo: self location fullNameWithIndicator.	
+	^ Smalltalk backupTo: self imageLocation fullName	

@@ -2,7 +2,6 @@ accessing
 spawn
 
 	process := OSSUnixSubprocess new
-		command: vmLocation fullNameWithIndicator;
-		arguments: { '--nodisplay' . location fullNameWithIndicator };
-		redirectStdout;
+		command: self vmBinary fullNameWithIndicator;
+		arguments: { "'--nodisplay' . "(self imageLocation , 'image') fullNameWithIndicator };
 		run.

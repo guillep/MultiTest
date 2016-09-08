@@ -1,8 +1,10 @@
-tests
+test-barriers
 testWaitUntilNodeIsFinished
 	
 	self with: #waiting do: [
 		self announce: #asserted ].
 	
-	self halt.
-	self waitFor: #asserted.
+	self localDo: [
+		self waitFor: #asserted.
+	]
+	
