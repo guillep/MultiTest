@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfMultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfMultiTest",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
