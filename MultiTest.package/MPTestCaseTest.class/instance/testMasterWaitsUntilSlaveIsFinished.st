@@ -1,5 +1,5 @@
 test-barriers
-testWaitUntilNodeIsFinished
+testMasterWaitsUntilSlaveIsFinished
 	
 	self with: #waiting do: [
 		self announce: #asserted ].
