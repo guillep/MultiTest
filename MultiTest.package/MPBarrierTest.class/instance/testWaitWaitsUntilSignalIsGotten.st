@@ -2,8 +2,8 @@ tests
 testWaitWaitsUntilSignalIsGotten
 
 	| master slave |
-	master := MPTestMaster new.
-	slave := MPTestSlave new.
+	master := MPTestMasterRole new.
+	slave := MPTestSlaveRole new.
 	
 	slave testMaster: master.
 	

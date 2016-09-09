@@ -1,15 +1,14 @@
 {
-	"category" : "MultiTest",
+	"category" : "MultiTest-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"barriers",
-		"worker" ],
-	"name" : "MPTestCaseRole",
+		"node" ],
+	"name" : "MPForkingSlaveNodeTest",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }

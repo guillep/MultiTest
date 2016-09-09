@@ -1,0 +1,23 @@
+{
+	"category" : "MultiTest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"location",
+		"process",
+		"slaveProxy",
+		"errors",
+		"deferredActions",
+		"id",
+		"testMaster",
+		"startedSemaphore",
+		"malvinaNode",
+		"remoteMessagesWorker" ],
+	"name" : "MPTestSlaveNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

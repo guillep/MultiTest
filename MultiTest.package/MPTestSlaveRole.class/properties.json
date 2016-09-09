@@ -6,10 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"barriers",
-		"worker" ],
-	"name" : "MPTestCaseRole",
+		"id",
+		"testMaster",
+		"node" ],
+	"name" : "MPTestSlaveRole",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MPTestCaseRole",
 	"type" : "normal" }
