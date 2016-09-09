@@ -20,6 +20,6 @@ baseline: spec
 				baseline: 'Malvina'
 				with: [ 
 					spec
-						repository: 'github://marianopeck/Malvina' ].
+						repository: 'github://guillep/Malvina' ].
 			
 			spec package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess' 'Malvina' ) ] ]
