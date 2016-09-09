@@ -14,7 +14,12 @@ baseline: spec
 				baseline: 'OSSubprocess'
 				with: [ 
 					spec
-						repository: 'github://marianopeck/OSSubprocess:v0.2.0/repository' ];
-						import: 'OSSubprocess' ].
+						repository: 'github://marianopeck/OSSubprocess:v0.2.0/repository' ].
+
 			spec
-				package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess') ]
+				baseline: 'Malvina'
+				with: [ 
+					spec
+						repository: 'github://marianopeck/Malvina' ].
+			
+			spec package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess' 'Malvina' ) ] ]
