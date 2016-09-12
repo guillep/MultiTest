@@ -5,4 +5,4 @@ signal
 	isSignaled := true.
 	semaphore signal.
 
-	testCaseRole signalBarrier: self
+	testNode broadcastBarrier: barrierId

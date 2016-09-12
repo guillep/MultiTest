@@ -1,0 +1,4 @@
+running
+runCaseManaged
+
+	^ self runCase

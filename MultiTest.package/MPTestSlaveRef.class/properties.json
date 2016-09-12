@@ -1,0 +1,22 @@
+{
+	"category" : "MultiTest-Master",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"id",
+		"peer",
+		"process",
+		"testMaster",
+		"location",
+		"deferredActions",
+		"errors",
+		"connectionSemaphore",
+		"finishedSemaphore" ],
+	"name" : "MPTestSlaveRef",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

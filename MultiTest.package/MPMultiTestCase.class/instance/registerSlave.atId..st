@@ -1,4 +1,4 @@
 as yet unclassified
 registerSlave: aSlaveProxy atId: anId
 
-	role registerSlave: aSlaveProxy atId: anId
+	currentNode registerSlave: aSlaveProxy atId: anId

@@ -1,6 +1,6 @@
 malvina integration
 remoteTestMaster
 
-	| masterNode |
-	masterNode := malvinaNode masterRefs anyOne.
-	^ masterNode evaluate: [ Smalltalk at: #CurrentTestMaster ]
+	| masterRemoteRef |
+	masterRemoteRef := malvinaNode masterRefs anyOne.
+	^ masterRemoteRef sendRequest: (MVGetSharedObject new key: #master)

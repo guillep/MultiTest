@@ -1,4 +1,4 @@
 accessing
 spawnedImages
 	
-	^ role spawnedImages
+	^ currentNode spawnedImages

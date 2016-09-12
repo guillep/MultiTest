@@ -1,0 +1,17 @@
+{
+	"category" : "MultiTest-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"barriers",
+		"testMasterPort",
+		"remoteMessagesWorker",
+		"deferredActions" ],
+	"name" : "MPTestNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

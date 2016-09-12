@@ -1,4 +1,4 @@
 events
 announce: anEvent
 
-	role announce: anEvent
+	currentNode announce: anEvent

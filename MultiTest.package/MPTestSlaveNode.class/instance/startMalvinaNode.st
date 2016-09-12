@@ -5,10 +5,10 @@ startMalvinaNode
 
 	malvinaNode := MVNode new.
 	malvinaNode addMasterAddress: (TCPAddress localAt: self testMasterPort).
+	malvinaNode sharedObjectAt: #slave put: self.
 	malvinaNode start.
 	
 	self scheduleRemote: [ | masterRemoteRef |
-		self halt.
 		masterRemoteRef := malvinaNode masterRefs anyOne.
 		masterRemoteRef sendRequest: (MPRegisterSlaveRequest new id: id)
 	].

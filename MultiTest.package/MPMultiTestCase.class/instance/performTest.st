@@ -1,4 +1,6 @@
 as yet unclassified
 performTest
 
-	[super performTest] ensure: [ role doPerformTest ]
+	[super performTest] ensure: [ 
+		[currentNode startIn: self] ensure: [ 
+			currentNode assertSlavesFinishedSuccessfully ] ]

@@ -5,3 +5,4 @@ stop
 	server ifNotNil: #stop.
 	
 	network := server := nil.
+	"slaves do: #kill"

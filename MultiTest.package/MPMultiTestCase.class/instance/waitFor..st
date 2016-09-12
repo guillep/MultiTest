@@ -1,4 +1,4 @@
 events
 waitFor: anEvent
 
-	role waitFor: anEvent
+	currentNode waitFor: anEvent

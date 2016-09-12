@@ -1,4 +1,4 @@
 events
 barrierAt: anEvent
 
-	^ role barrierAt: anEvent
+	^ currentNode barrierAt: anEvent

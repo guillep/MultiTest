@@ -1,5 +1,5 @@
 malvina integration
 announceTestFinished
 
-	self scheduleRemote: [ 
+	^ self scheduleRemote: [ 
 		self remoteTestMaster announceFinished: id ]

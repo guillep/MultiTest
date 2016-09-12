@@ -1,12 +1,13 @@
 {
-	"category" : "MultiTest",
+	"category" : "MultiTest-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"role" ],
+		"role",
+		"currentNode" ],
 	"name" : "MPMultiTestCase",
 	"pools" : [
 		 ],

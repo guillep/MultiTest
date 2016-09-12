@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MPMultiTestConfigurationTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

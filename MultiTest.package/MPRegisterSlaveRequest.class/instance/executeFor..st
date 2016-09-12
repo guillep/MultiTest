@@ -2,6 +2,6 @@ as yet unclassified
 executeFor: senderPeer
 
 	| master |
-	master := context network sharedObjectAt: #master.
-	master registerSlave: senderPeer atId: id.
+	master := senderPeer network sharedObjectAt: #master.
+	master registerSlavePeer: senderPeer atId: id.
 	context returnValue: nil to: senderPeer
