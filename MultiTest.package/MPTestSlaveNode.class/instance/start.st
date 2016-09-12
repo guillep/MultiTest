@@ -11,7 +11,7 @@ start
 				self announceTestException: anException ]
 		] ensure: [ 
 			self announceTestFinished.
-			testMaster testCase waitFor: #_youCanDie_now.
+			self waitFor: #_youCanDie_now.
 			Smalltalk exitSuccess ]
 	].
 	^ isForked

@@ -15,7 +15,9 @@
 		"testMaster",
 		"startedSemaphore",
 		"malvinaNode",
-		"remoteMessagesWorker" ],
+		"remoteMessagesWorker",
+		"slaves",
+		"testMasterPort" ],
 	"name" : "MPTestSlaveNode",
 	"pools" : [
 		 ],

@@ -6,13 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"testCase",
+		"network",
+		"testMasterPort",
 		"server",
-		"slaves",
-		"deferredActions",
-		"network" ],
-	"name" : "MPTestMasterRole",
+		"slaves" ],
+	"name" : "MPTestMasterNode",
 	"pools" : [
 		 ],
-	"super" : "MPTestCaseRole",
+	"super" : "Object",
 	"type" : "normal" }

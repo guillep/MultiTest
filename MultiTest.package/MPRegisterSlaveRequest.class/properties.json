@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"testCase",
-		"server",
-		"slaves",
-		"deferredActions",
-		"network" ],
-	"name" : "MPTestMasterRole",
+		"id" ],
+	"name" : "MPRegisterSlaveRequest",
 	"pools" : [
 		 ],
-	"super" : "MPTestCaseRole",
+	"super" : "SeamlessRequest",
 	"type" : "normal" }

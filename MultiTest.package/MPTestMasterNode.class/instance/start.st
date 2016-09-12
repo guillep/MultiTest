@@ -1,6 +1,6 @@
-as yet unclassified
+start-stop
 start
-
+	
 	network := MVNetwork new.
 	network sharedObjectAt: #master put: self.
-	server := network startServerOn: testCase defaultPort.
+	server := network startServerOn: testMasterPort.
