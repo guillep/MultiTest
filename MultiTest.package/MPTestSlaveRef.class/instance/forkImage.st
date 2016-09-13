@@ -1,8 +1,8 @@
 forking
 forkImage
 
-	| isForked |
-	self cloneVM.
-	isForked := self cloneImage.
-	isForked ifFalse: [ self spawn ].
-	^ isForked
+	^ ((TKTFuture doing: [ self cloneVM ])
+		collect: [ :value | self cloneImage ])
+			collect: [ :isForked |
+				isForked ifTrue: [ self spawn ].
+				isForked ]

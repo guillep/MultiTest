@@ -1,13 +1,26 @@
 forking
 start
 
+	| masterRefF slaveRegisteredF actionsExecutedF |
 	self startMalvinaNode.
-	[ [ deferredActions do: #value ]
-		on: Error
-		do: [ :anException | self announceTestException: anException ]
-	] ensure: [ 
-		(self announceTestFinished)
-			onSuccessDo: [ :v | 
-				testMaster shouldKeepSlavesAlive
-					ifTrue: [ self halt ]
-					ifFalse: [Smalltalk exitSuccess ] ] ]
+	malvinaNode masterRefs anyOne.
+	
+	masterRefF := TKTFuture doing: [ malvinaNode masterRefs anyOne ].
+	slaveRegisteredF := masterRefF
+		collect: [ :masterRef | masterRef sendRequest: (MPRegisterSlaveRequest new id: id) ]
+		withRetry: (TKTRetry every: 100 milliSeconds for: 2 seconds).
+	
+	actionsExecutedF := (deferredActions
+		inject: slaveRegisteredF
+		into: [ :future :nextAction | future collect: [ :v | nextAction value ] ])
+			on: Error do: [ :anException | self announceTestException: anException ].
+	
+	(actionsExecutedF firstCompleteOf: [ 1 minute wait. self error: 'Timeout!' ] future)
+		onSuccessDo: [ :value | testMaster shouldKeepSlavesAlive
+								ifTrue: [ self halt ]
+								ifFalse: [Smalltalk exitSuccess ] ];
+		onFailureDo: [ :error | testMaster shouldKeepSlavesAlive
+								ifTrue: [ self halt ]
+								ifFalse: [Smalltalk exitFailure ] ].
+							
+	actionsExecutedF waitForCompletion: 2 minutes.

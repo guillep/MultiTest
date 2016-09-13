@@ -6,4 +6,3 @@ initialize
 	errors := OrderedCollection new.
 	
 	connectionSemaphore := Semaphore new.
-	finishedSemaphore := Semaphore new.
