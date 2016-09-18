@@ -1,9 +1,10 @@
-as yet unclassified
+tests
 testKilledSlaveIsNotRunning
 
+	| forkF |
 	node := MPTestSlaveRef new.
-	node forkAndStartIn: MPMultiTestCase new.
-	1 second wait.
+	forkF := node forkAndStartIn: MPMultiTestCase new.
+	forkF waitForCompletion: 1 second.
 	
 	node kill.
 	1 second wait.

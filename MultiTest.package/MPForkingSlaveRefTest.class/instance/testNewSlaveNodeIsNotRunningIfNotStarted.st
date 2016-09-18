@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testNewSlaveNodeIsNotRunningIfNotStarted
 
 	self deny: MPTestSlaveRef new isRunning

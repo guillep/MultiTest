@@ -1,7 +1,9 @@
-as yet unclassified
+tests
 testStartedSlaveIsRunning
 
+	| forkedF |
 	node := MPTestSlaveRef new.
-	node forkAndStartIn: MPMultiTestCase new.
+	forkedF := node forkAndStartIn: MPMultiTestCase new.
+	forkedF waitForCompletion: 1 second.
 	
 	self assert: node isRunning
