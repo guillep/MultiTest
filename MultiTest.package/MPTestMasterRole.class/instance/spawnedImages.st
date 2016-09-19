@@ -1,3 +1,0 @@
-accessing
-spawnedImages
-	^ slaves values
