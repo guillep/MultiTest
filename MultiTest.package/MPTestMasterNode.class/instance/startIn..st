@@ -2,6 +2,7 @@ start-stop
 startIn: aTestCase
 	
 	| allForkedF allConnectedF |
+	StringSignal emit: ('[MultiTest] Test-run: {test}' format: { 'test' -> testCase asString } asDictionary).
 	allForkedF := TKTFuture fromCollectionOfFutures: (self slaves
 		collect: [ :each | each forkAndStartIn: aTestCase ]).
 	

@@ -1,7 +1,7 @@
 as yet unclassified
 performTest
 
-	[super performTest] ensure: [ 
-		((currentNode startIn: self) collect: [ :v |
-			currentNode assertSlavesFinishedSuccessfully ])
-				waitForCompletion: 2 minutes. ]
+	[super performTest] ensure: [ | future |
+		future := currentNode startIn: self.
+		future waitForCompletion: 2 minutes. 
+		currentNode assertSlavesFinishedSuccessfully ]
