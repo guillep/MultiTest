@@ -1,10 +1,13 @@
 forking
 forkAndStartIn: aTestCase
 
-	| isForkedF |
+	| isForkedF callerProcess |
+	callerProcess := Processor activeProcess.
+	
 	isForkedF := self forkImage.
-	^ isForkedF collect: [ :isForked |
+	isForkedF onSuccessDo: [ :isForked |
 		isForked ifTrue: [ | node |
+			callerProcess terminate.
 			node := MPTestSlaveNode new
 				id: id;
 				testMaster: testMaster;
@@ -12,6 +15,7 @@ forkAndStartIn: aTestCase
 				deferredActions: deferredActions.
 			aTestCase currentNode: node.
 			node start.
-		].
-		isForked
-	].
+		] ].
+
+	isForkedF waitForCompletion: 1 second.
+	^ isForkedF	

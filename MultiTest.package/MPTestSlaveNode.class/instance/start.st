@@ -3,7 +3,6 @@ start
 
 	| masterRefF slaveRegisteredF actionsExecutedF |
 	self startMalvinaNode.
-	malvinaNode masterRefs anyOne.
 	
 	masterRefF := TKTFuture doing: [ malvinaNode masterRefs anyOne ].
 	slaveRegisteredF := masterRefF
@@ -15,7 +14,8 @@ start
 		into: [ :future :nextAction | future collect: [ :v | nextAction value ] ])
 			on: Error do: [ :anException | self announceTestException: anException ].
 	
-	(actionsExecutedF firstCompleteOf: [ 1 minute wait. self error: 'Timeout!' ] future)
+	((actionsExecutedF flatCollect: [ :v | self allOutMessagesAreSentFuture ])
+		firstCompleteOf: [ 1 minute wait. self error: 'Timeout!' ] future)
 		onSuccessDo: [ :value | testMaster shouldKeepSlavesAlive
 								ifTrue: [ self halt ]
 								ifFalse: [Smalltalk exitSuccess ] ];

@@ -5,8 +5,8 @@ startIn: aTestCase
 	allForkedF := TKTFuture fromCollectionOfFutures: (self slaves
 		collect: [ :each | each forkAndStartIn: aTestCase ]).
 	
-	allConnectedF := (allForkedF collect: [ self startServer ])
-		flatCollect: [ :v | self slaves do: [ :each | each waitForPeer ] ].
+	allConnectedF := (allForkedF collect: [ :v | self startServer ])
+		collect: [ :v | self slaves do: [ :each | each waitForPeer ] ].
 
 	^ deferredActions
 		inject: allConnectedF

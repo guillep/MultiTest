@@ -8,8 +8,9 @@
 	"instvars" : [
 		"barriers",
 		"testMasterPort",
-		"remoteMessagesWorker",
-		"deferredActions" ],
+		"deferredActions",
+		"outboxWorker",
+		"outMessages" ],
 	"name" : "MPTestNode",
 	"pools" : [
 		 ],

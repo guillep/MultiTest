@@ -1,10 +1,12 @@
 tests - start/stop
 testConnectSlaveToMasterRegistersSlaveIntoMaster
 	
+	| executionF |
 	master := MPTestMasterNode new.
 	master addSlaveAtId: #slave.
 	master testMasterPort: 59260.
-	master startIn: MPMultiTestCase new.
+	
+	executionF := master startIn: MPMultiTestCase new.
 	
 	2 second wait.
 	

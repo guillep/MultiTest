@@ -4,4 +4,6 @@ initialize
 	super initialize.
 	barriers := Dictionary new.
 	deferredActions := OrderedCollection new.
-	remoteMessagesWorker := TKTWorker new.
+	
+	outboxWorker := TKTWorker new.
+	outMessages := OrderedCollection new.

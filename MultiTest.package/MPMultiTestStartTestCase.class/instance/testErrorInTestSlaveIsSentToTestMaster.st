@@ -1,12 +1,13 @@
 tests - errors
 testErrorInTestSlaveIsSentToTestMaster
 	
+	| executionF |
 	master := MPTestMasterNode new.
 	master testMasterPort: 59260.
 	
 	master with: #slave do: [ self error ].
 	
-	master startIn: MPMultiTestCase new.
+	executionF := master startIn: MPMultiTestCase new.
 	
 	2 second wait.
 	

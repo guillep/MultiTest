@@ -1,7 +1,7 @@
 malvina integration
 startMalvinaNode
 
-	remoteMessagesWorker start.
+	outboxWorker start.
 
 	malvinaNode := MVNode new.
 	malvinaNode addMasterAddress: (TCPAddress localAt: self testMasterPort).

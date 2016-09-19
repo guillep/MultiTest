@@ -1,7 +1,7 @@
 start-stop
 startServer
 
-	remoteMessagesWorker start.
+	outboxWorker start.
 
 	network := MVNetwork new.
 	network sharedObjectAt: #master put: self.
