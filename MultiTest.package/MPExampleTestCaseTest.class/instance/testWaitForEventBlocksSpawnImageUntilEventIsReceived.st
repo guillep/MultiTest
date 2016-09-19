@@ -18,3 +18,4 @@ testWaitForEventBlocksSpawnImageUntilEventIsReceived
 		self waitFor: #asserted.
 		(parent / 'file') ensureDelete.
 	].
+	self halt.

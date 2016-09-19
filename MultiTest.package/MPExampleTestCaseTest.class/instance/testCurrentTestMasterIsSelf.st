@@ -2,4 +2,4 @@ test-basic
 testCurrentTestMasterIsSelf
 	
 	self localDo: [
-		self assert: (Smalltalk at: #CurrentTestMaster) == self ].
+		self assert: (currentNode network sharedObjectAt: #master) == currentNode ].

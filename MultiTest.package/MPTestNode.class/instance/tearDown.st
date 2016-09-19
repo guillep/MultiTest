@@ -1,4 +1,4 @@
 as yet unclassified
 tearDown
 
-	"Nothing"
+	outboxWorker stop; purge
