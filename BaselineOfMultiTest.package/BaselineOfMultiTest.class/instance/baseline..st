@@ -11,6 +11,12 @@ baseline: spec
 						versionString: '0.9.0';
 						repository: 'http://smalltalkhub.com/mc/Pharo/Seamless/main/' ].
 			spec
+				configuration: 'BeaconCore'
+				with: [ 
+					spec
+						versionString: #'development';
+						repository: 'http://smalltalkhub.com/mc/Pharo/Beacon/main/' ].
+			spec
 				baseline: 'OSSubprocess'
 				with: [ 
 					spec
@@ -22,4 +28,4 @@ baseline: spec
 					spec
 						repository: 'github://guillep/Malvina' ].
 			
-			spec package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess' 'Malvina' ) ] ]
+			spec package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess' 'Malvina' 'BeaconCore' ) ] ]
