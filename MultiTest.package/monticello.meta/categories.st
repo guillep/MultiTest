@@ -1,4 +1,5 @@
 SystemOrganization addCategory: #MultiTest!
+SystemOrganization addCategory: 'MultiTest-CommandLine'!
 SystemOrganization addCategory: 'MultiTest-Communication'!
 SystemOrganization addCategory: 'MultiTest-Core'!
 SystemOrganization addCategory: 'MultiTest-Master'!
