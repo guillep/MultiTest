@@ -8,7 +8,6 @@ testErrorInTestSlaveIsSentToTestMaster
 	master with: #slave do: [ self error ].
 	
 	executionF := master startIn: MPMultiTestCase new.
-	
-	2 second wait.
+	executionF waitForCompletion: 2 second.
 	
 	self assert: master slaves anyOne errors notEmpty

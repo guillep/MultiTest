@@ -6,3 +6,4 @@ initialize
 	errors := OrderedCollection new.
 	
 	connectionSemaphore := Semaphore new.
+	commandRunner := TKTNewProcessTaskRunner new.

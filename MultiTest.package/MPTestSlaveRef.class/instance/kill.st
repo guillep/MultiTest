@@ -1,5 +1,4 @@
 forking
 kill
 	
-	(process notNil and: [process isRunning])
-		ifTrue: [ process kill ]
+	self isRunning ifTrue: [ process kill ]

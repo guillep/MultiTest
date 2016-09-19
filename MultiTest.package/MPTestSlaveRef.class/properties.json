@@ -13,7 +13,8 @@
 		"location",
 		"deferredActions",
 		"errors",
-		"connectionSemaphore" ],
+		"connectionSemaphore",
+		"commandRunner" ],
 	"name" : "MPTestSlaveRef",
 	"pools" : [
 		 ],

@@ -12,7 +12,7 @@ start
 	actionsExecutedF := (deferredActions
 		inject: slaveRegisteredF
 		into: [ :future :nextAction | future collect: [ :v | nextAction value ] ])
-			on: Error do: [ :anException | self announceTestException: anException ].
+			on: Exception do: [ :anException | self announceTestException: anException ].
 	
 	((actionsExecutedF flatCollect: [ :v | self allOutMessagesAreSentFuture ])
 		firstCompleteOf: [ 1 minute wait. self error: 'Timeout!' ] future)
