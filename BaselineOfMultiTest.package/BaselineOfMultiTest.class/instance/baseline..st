@@ -28,4 +28,11 @@ baseline: spec
 					spec
 						repository: 'github://guillep/Malvina' ].
 			
-			spec package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess' 'Malvina' 'BeaconCore' ) ] ]
+			spec
+				baseline: 'TaskIt'
+				with: [ 
+					spec
+						repository: 'github://sbragagnolo/Taskit:dev-0.3';
+						loads: 'TaskItRetry' ].
+			
+			spec package: 'MultiTest' with: [ spec requires: #('Seamless' 'OSSubprocess' 'Malvina' 'BeaconCore' 'TaskIt' ) ] ]
