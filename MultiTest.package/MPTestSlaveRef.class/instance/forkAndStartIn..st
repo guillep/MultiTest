@@ -1,11 +1,10 @@
 forking
 forkAndStartIn: aTestCase
 
-	| isForkedF callerProcess |
+	| callerProcess nodeStartedF |
 	callerProcess := Processor activeProcess.
-	
-	isForkedF := self forkImage.
-	isForkedF onSuccessDo: [ :isForked |
+
+	nodeStartedF := self forkImage collect: [ :isForked |
 		isForked ifTrue: [ | node |
 			TranscriptLogger runDuring: [
 				callerProcess terminate.
@@ -16,7 +15,8 @@ forkAndStartIn: aTestCase
 					deferredActions: deferredActions.
 				aTestCase currentNode: node.
 				node start.
-		] ] ].
+		] ].
+		isForked ].
 
-	isForkedF waitForCompletion: 2 second.
-	^ isForkedF	
+	nodeStartedF waitForCompletion: 2 second.
+	^ nodeStartedF	
