@@ -7,7 +7,7 @@ startIn: aTestCase
 		collect: [ :each | each forkAndStartIn: aTestCase ]).
 	
 	allConnectedF := (allForkedF collect: [ :v | self startServer ])
-		collect: [ :v | self slaves do: [ :each | each waitForPeer ] ].
+		collect: [ :v | self slaves do: [ :each | each waitForPeer: 2 seconds ] ].
 
 	^ (deferredActions
 		inject: allConnectedF
