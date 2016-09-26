@@ -1,7 +1,7 @@
 start-stop
-startIn: aTestCase
+start
 	
-	| allClonedF allForkedF allConnectedF testProcess |
+	| allClonedF allForkedF allConnectedF testProcess serverStartedF |
 	StringSignal emit: ('[MultiTest] Test-run: {test}' format: { 'test' -> testCase asString } asDictionary).
 	
 	testProcess := Processor activeProcess.
@@ -16,15 +16,17 @@ startIn: aTestCase
 	
 	allClonedF onSuccessDo: [ :isForked | isForked ifFalse: [ testProcess resume ] ].
 	testProcess suspend.
-	
-	allForkedF := self slaves inject: allClonedF into: [ :acumF :slave |
-		acumF collect: [ :v | slave spawn ] ].
-	
-	allConnectedF := (allForkedF collect: [ :v | self startServer ])
-		collect: [ :v | self slaves do: [ :each | each waitForPeer: 2 seconds ] ].
 
+	serverStartedF := allClonedF collect: [ :v | self startServer ].
+
+	allForkedF := self slaves
+		inject: serverStartedF
+		into: [ :acumF :slave | 
+			(acumF collect: [ :v | slave spawn ])
+				collect: [ :v | slave waitForPeer: 2 seconds ] ].
+	
 	^ (deferredActions
-		inject: allConnectedF
+		inject: allForkedF
 		into: [ :future :nextAction | future collect: [ :v | nextAction value ] ])
 			flatCollect: [ :v | 
 				TKTFuture fromCollectionOfFutures: (self slaves

@@ -1,3 +1,4 @@
 accessing
 testCase
-	self shouldBeImplemented.
+	
+	^ testCase
