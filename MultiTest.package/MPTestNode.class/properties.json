@@ -10,7 +10,8 @@
 		"testMasterPort",
 		"deferredActions",
 		"outboxWorker",
-		"outMessages" ],
+		"outMessages",
+		"workerPool" ],
 	"name" : "MPTestNode",
 	"pools" : [
 		 ],

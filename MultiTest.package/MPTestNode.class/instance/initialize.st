@@ -7,3 +7,6 @@ initialize
 	
 	outboxWorker := TKTWorker new.
 	outMessages := OrderedCollection new.
+	workerPool := TKTWorkerPool new
+		poolMaxSize: 5;
+		start.

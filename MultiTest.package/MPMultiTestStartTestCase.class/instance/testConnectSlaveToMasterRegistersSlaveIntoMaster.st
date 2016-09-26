@@ -2,6 +2,7 @@ tests - start/stop
 testConnectSlaveToMasterRegistersSlaveIntoMaster
 	
 	| executionF |
+	master keepSlavesAlive.
 	master addSlaveAtId: #slave.
 	executionF := master start.
 	

@@ -1,4 +1,5 @@
 as yet unclassified
 stop
 
-	outboxWorker stop; purge
+	workerPool stop; purge.
+	outboxWorker stop; purge.

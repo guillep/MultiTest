@@ -6,5 +6,4 @@ setUp
 	testCase := MPMultiTestCase new.
 	master testCase: testCase.
 	testCase currentNode: master.
-	master keepSlavesAlive.
 	master testMasterPort: 59260.

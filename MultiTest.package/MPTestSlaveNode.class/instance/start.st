@@ -8,7 +8,7 @@ start
 
 	StringSignal emit: ('[MultiTest] current task runner: {ref}' format: { 'ref' -> TKTCurrentTaskRunner value printString } asDictionary).
 	
-	masterRefF := TKTFuture doing: [ | masterRef | 
+	masterRefF := workerPool future: [ | masterRef | 
 		StringSignal emit: ('[MultiTest] Getting master ref').
 		masterRef := malvinaNode masterRefs anyOne.
 		StringSignal emit: ('[MultiTest] Got master ref: {ref}' format: { 'ref' -> masterRef printString } asDictionary).

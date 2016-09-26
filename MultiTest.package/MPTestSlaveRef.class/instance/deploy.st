@@ -1,7 +1,7 @@
 forking
 deploy
 
-	^ ((TKTFuture doing: [ self cloneVM ])
+	^ ((self workerPool future: [ self cloneVM ])
 		collect: [ :value | self cloneImage ])
 			collect: [ :isFork |
 				isFork ifTrue: [ self installAsSlaveNode ].

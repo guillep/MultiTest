@@ -1,21 +1,21 @@
 start-stop
 start
 	
-	| allClonedF allForkedF allConnectedF testProcess serverStartedF |
+	| allClonedF allForkedF serverStartedF processController |
 	StringSignal emit: ('[MultiTest] Test-run: {test}' format: { 'test' -> testCase asString } asDictionary).
 	
-	testProcess := Processor activeProcess.
+	processController := Semaphore new.
 	
 	allClonedF := self slaves
-		inject: (TKTFuture of: false)
+		inject: ((TKTFuture of: false) runner: workerPool; yourself)
 		into: [ :acumF :eachSlave | acumF flatCollect: [ :previousAlreadyForked |
 				previousAlreadyForked
 					ifTrue: [ TKTFuture of: previousAlreadyForked ]
 					ifFalse: [ eachSlave deploy collect: [ :isForked | 
 							previousAlreadyForked or: [ isForked ] ] ] ] ].
 	
-	allClonedF onSuccessDo: [ :isForked | isForked ifFalse: [ testProcess resume ] ].
-	testProcess suspend.
+	allClonedF onSuccessDo: [ :isForked | isForked ifFalse: [ processController signal ] ].
+	processController wait.
 
 	serverStartedF := allClonedF collect: [ :v | self startServer ].
 

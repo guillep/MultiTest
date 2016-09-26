@@ -1,7 +1,7 @@
 forking
 forkImage
 
-	^ ((TKTFuture doing: [ self cloneVM ])
+	^ ((self workerPool future: [ self cloneVM ])
 		collect: [ :value | self cloneImage ])
 			collect: [ :isForked |
 				isForked ifFalse: [ self spawn ].

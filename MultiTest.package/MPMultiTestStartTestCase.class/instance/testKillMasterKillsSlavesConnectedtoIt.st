@@ -7,6 +7,6 @@ testKillMasterKillsSlavesConnectedtoIt
 	
 	1 second wait.
 	master kill.
-	1 second wait.
+	2 second wait.
 	
 	self deny: master slaves anyOne isRunning

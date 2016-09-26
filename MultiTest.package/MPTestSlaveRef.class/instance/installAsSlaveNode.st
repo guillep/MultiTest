@@ -4,8 +4,6 @@ installAsSlaveNode
 	| node |
 	TranscriptLogger runDuring: [
 		[
-		(TKTWorkerPool global freeWorkers isEmpty
-			ifFalse: [self error: 'global pool has no free workers']).
 		StringSignal emit: ('[MultiTest] Installing slave node {id}' format: { 'id' -> id printString } asDictionary).
 		node := MPTestSlaveNode new.
 		node id: id.

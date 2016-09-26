@@ -1,4 +1,6 @@
 as yet unclassified
 allOutMessagesAreSentFuture
 
-	^ (TKTFuture fromCollectionOfFutures: outMessages)
+	TKTCurrentTaskRunner
+		value: workerPool
+		during: [ ^ (TKTFuture fromCollectionOfFutures: outMessages) ]

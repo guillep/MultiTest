@@ -8,6 +8,6 @@ testBarrierEventFromSlaveArrivesToOtherSlave
 		testCase announce: #unblocked ].
 
 	executionF := master start.
-	2 second wait.
+	3 second wait.
 	
 	self assert: (master barrierAt: #unblocked) isSignaled
