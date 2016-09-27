@@ -1,8 +1,6 @@
 malvina integration
 startMalvinaNode
 
-	outboxWorker start.
-
 	malvinaNode := MVNode new.
 	malvinaNode addMasterAddress: (TCPAddress localAt: self testMasterPort).
 	malvinaNode sharedObjectAt: #slave put: self.

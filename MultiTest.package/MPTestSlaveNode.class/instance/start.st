@@ -1,32 +1,26 @@
 forking
 start
 
-	| masterRefF slaveRegisteredF actionsExecutedF doneF |
+	| slaveRegisteredF actionsExecutedF doneF |
 	StringSignal emit: ('[MultiTest] Slave Started: {slave}' format: { 'slave' -> id printString } asDictionary).
 	self startMalvinaNode.
 	StringSignal emit: ('[MultiTest] Started malvina node').
 
-	StringSignal emit: ('[MultiTest] current task runner: {ref}' format: { 'ref' -> TKTCurrentTaskRunner value printString } asDictionary).
+	masterRef := MPTestMasterRef new
+		slaveNode: self;
+		masterRemoteRef: malvinaNode masterRefs anyOne;
+		yourself.
 	
-	masterRefF := workerPool future: [ | masterRef | 
-		StringSignal emit: ('[MultiTest] Getting master ref').
-		masterRef := malvinaNode masterRefs anyOne.
-		StringSignal emit: ('[MultiTest] Got master ref: {ref}' format: { 'ref' -> masterRef printString } asDictionary).
-		masterRef ].
+	StringSignal emit: ('[MultiTest] Master ref created').
 	
-	1 second wait.
-
-	StringSignal emit: ('[MultiTest] masterRefF: {ref}' format: { 'ref' -> masterRefF printString } asDictionary).
-
-	masterRefF onFailureDo: [ :f | 
-		StringSignal emit: ('[MultiTest] Failure: {f}' format: { 'f' -> f printString } asDictionary). ].
-	
-	slaveRegisteredF := masterRefF
-		collect: [ :masterRef | self registerToMaster: masterRef ]
+	slaveRegisteredF := (workerPool future: [ ])
+		collect: [ :v | masterRef registerSlave: self ]
 		withRetry: (TKTRetry every: 100 milliSeconds for: 2 seconds).
 	
-	slaveRegisteredF onFailureDo: [ :f | 
-		StringSignal emit: ('[MultiTest] Failure: {f}' format: { 'f' -> f printString } asDictionary). ].
+	slaveRegisteredF onSuccessDo: [ :v | StringSignal emit: 'Success registration' ].	
+	slaveRegisteredF onFailureDo: [ :err | ExceptionSignal emit: err ].
+
+StringSignal emit: workerPool asString.
 	
 	actionsExecutedF := (deferredActions
 		inject: slaveRegisteredF

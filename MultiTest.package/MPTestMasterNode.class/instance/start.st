@@ -24,7 +24,7 @@ start
 		into: [ :acumF :slave | 
 			(acumF collect: [ :v | slave spawn ])
 				collect: [ :v | slave waitForPeer: 2 seconds ] ].
-	
+
 	^ (deferredActions
 		inject: allForkedF
 		into: [ :future :nextAction | future collect: [ :v | nextAction value ] ])

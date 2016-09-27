@@ -6,14 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"location",
-		"id",
-		"testMaster",
-		"startedSemaphore",
-		"malvinaNode",
-		"masterRef" ],
-	"name" : "MPTestSlaveNode",
+		"masterRemoteRef",
+		"slaveNode",
+		"outMessages",
+		"outboxWorker" ],
+	"name" : "MPTestMasterRef",
 	"pools" : [
 		 ],
-	"super" : "MPTestNode",
+	"super" : "Object",
 	"type" : "normal" }

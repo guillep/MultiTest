@@ -1,4 +1,5 @@
 malvina integration
 broadcastBarrier: aBarrierId
 
-	self scheduleRemote: [ self remoteTestMaster announce: aBarrierId ]
+	StringSignal emit: ('[MultiTest] Received barrier signal to slave {s}' format: { 's' -> aBarrierId asString } asDictionary).
+	masterRef announce: aBarrierId.

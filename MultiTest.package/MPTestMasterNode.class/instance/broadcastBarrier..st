@@ -1,4 +1,6 @@
 as yet unclassified
 broadcastBarrier: aBarrierId
 
-	self slaves do: [ :slave | slave announce: aBarrierId ]
+	StringSignal emit: ('[MultiTest] Received barrier signal to master: {s}' format: { 's' -> aBarrierId asString } asDictionary).
+
+	[ self slaves do: [ :slave | slave announce: aBarrierId ] ] fork.

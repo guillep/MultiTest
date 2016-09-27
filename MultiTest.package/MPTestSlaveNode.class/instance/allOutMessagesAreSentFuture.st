@@ -1,4 +1,4 @@
 as yet unclassified
 allOutMessagesAreSentFuture
 
-	self subclassResponsibility
+	^ masterRef allOutMessagesAreSentFuture

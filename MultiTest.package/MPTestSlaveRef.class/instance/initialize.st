@@ -7,3 +7,6 @@ initialize
 	
 	connectionSemaphore := Semaphore new.
 	commandRunner := TKTNewProcessTaskRunner new.
+	
+	outboxWorker := TKTWorker new start.
+	outMessages := OrderedCollection new.

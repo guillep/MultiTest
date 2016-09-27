@@ -14,7 +14,9 @@
 		"deferredActions",
 		"errors",
 		"connectionSemaphore",
-		"commandRunner" ],
+		"commandRunner",
+		"outboxWorker",
+		"outMessages" ],
 	"name" : "MPTestSlaveRef",
 	"pools" : [
 		 ],

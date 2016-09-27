@@ -6,7 +6,7 @@ testBarrierEventFromMasterArrivesToSlave
 	master with: #slave do: [ 
 		testCase waitFor: #something.
 		testCase announce: #unblocked ].
-	
+
 	executionF := master start.
 	2 second wait.
 	
