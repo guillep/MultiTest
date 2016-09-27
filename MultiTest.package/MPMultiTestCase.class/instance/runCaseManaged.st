@@ -1,0 +1,4 @@
+events
+runCaseManaged
+
+	^ self runCase
