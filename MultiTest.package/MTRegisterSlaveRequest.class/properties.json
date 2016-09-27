@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest-Communication",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"id" ],
+	"name" : "MTRegisterSlaveRequest",
+	"pools" : [
+		 ],
+	"super" : "SeamlessRequest",
+	"type" : "normal" }

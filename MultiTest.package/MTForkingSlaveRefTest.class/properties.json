@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"node" ],
+	"name" : "MTForkingSlaveRefTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

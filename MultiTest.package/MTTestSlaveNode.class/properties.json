@@ -1,0 +1,19 @@
+{
+	"category" : "MultiTest-Slave",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"location",
+		"id",
+		"testMaster",
+		"startedSemaphore",
+		"malvinaNode",
+		"masterRef" ],
+	"name" : "MTTestSlaveNode",
+	"pools" : [
+		 ],
+	"super" : "MTTestNode",
+	"type" : "normal" }

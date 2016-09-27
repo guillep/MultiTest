@@ -1,0 +1,15 @@
+{
+	"category" : "MultiTest-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"role",
+		"currentNode" ],
+	"name" : "MTMultiTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

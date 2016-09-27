@@ -1,0 +1,19 @@
+{
+	"category" : "MultiTest-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"barriers",
+		"testMasterPort",
+		"deferredActions",
+		"outboxWorker",
+		"outMessages",
+		"workerPool" ],
+	"name" : "MTTestNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

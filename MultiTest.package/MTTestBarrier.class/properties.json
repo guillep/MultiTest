@@ -1,0 +1,18 @@
+{
+	"category" : "MultiTest-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"semaphore",
+		"isSignaled",
+		"barrierId",
+		"testCaseRole",
+		"testNode" ],
+	"name" : "MTTestBarrier",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

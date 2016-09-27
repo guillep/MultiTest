@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MTTestResult",
+	"pools" : [
+		 ],
+	"super" : "TestResult",
+	"type" : "normal" }
