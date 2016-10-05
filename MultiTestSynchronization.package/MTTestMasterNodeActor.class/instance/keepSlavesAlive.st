@@ -1,0 +1,4 @@
+a
+keepSlavesAlive
+	
+	keepSlavesAlive := true

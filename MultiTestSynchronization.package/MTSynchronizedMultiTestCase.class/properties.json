@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTestSynchronization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MTSynchronizedMultiTestCase",
+	"pools" : [
+		 ],
+	"super" : "MTMultiTestCase",
+	"type" : "normal" }

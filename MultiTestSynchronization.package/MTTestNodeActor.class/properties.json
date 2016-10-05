@@ -1,0 +1,19 @@
+{
+	"category" : "MultiTestSynchronization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"barriers",
+		"testMasterPort",
+		"deferredActions",
+		"outboxWorker",
+		"outMessages",
+		"workerPool" ],
+	"name" : "MTTestNodeActor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

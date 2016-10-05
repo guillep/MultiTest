@@ -1,0 +1,19 @@
+{
+	"category" : "MultiTestSynchronization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"location",
+		"id",
+		"testMaster",
+		"startedSemaphore",
+		"malvinaNode",
+		"masterRef" ],
+	"name" : "MTTestSlaveNodeActor",
+	"pools" : [
+		 ],
+	"super" : "MTTestNodeActor",
+	"type" : "normal" }

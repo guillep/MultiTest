@@ -1,0 +1,4 @@
+accessing
+workerPool
+
+	^ testMaster workerPool

@@ -1,0 +1,16 @@
+{
+	"category" : "MultiTestSynchronization-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"master",
+		"slave",
+		"testCase" ],
+	"name" : "MTMultiTestStartTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

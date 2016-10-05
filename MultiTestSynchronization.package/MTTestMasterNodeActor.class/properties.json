@@ -1,0 +1,18 @@
+{
+	"category" : "MultiTestSynchronization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"network",
+		"server",
+		"slaves",
+		"testCase",
+		"keepSlavesAlive" ],
+	"name" : "MTTestMasterNodeActor",
+	"pools" : [
+		 ],
+	"super" : "MTTestNodeActor",
+	"type" : "normal" }

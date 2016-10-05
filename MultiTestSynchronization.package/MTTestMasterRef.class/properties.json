@@ -1,0 +1,17 @@
+{
+	"category" : "MultiTestSynchronization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"masterRemoteRef",
+		"slaveNode",
+		"outMessages",
+		"outboxWorker" ],
+	"name" : "MTTestMasterRef",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
