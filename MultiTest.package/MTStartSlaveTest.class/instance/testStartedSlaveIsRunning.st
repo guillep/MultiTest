@@ -6,5 +6,5 @@ testStartedSlaveIsRunning
 	slave run.
 	
 	"Give the time to the slave process to start"
-	50 milliSeconds wait.
+	200 milliSeconds wait.
 	self assert: slave isRunning

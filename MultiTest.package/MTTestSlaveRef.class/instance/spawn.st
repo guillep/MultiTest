@@ -11,7 +11,7 @@ spawn
 			self testCaseSelector asString.
 			id asString }.
 		
-	^ TKTNewProcessTaskRunner new future: [ | result | 
+	^ runner future: [ | result | 
 		process
 			runAndWaitPollingEvery: 50 milliSeconds
 			retrievingStreams: true

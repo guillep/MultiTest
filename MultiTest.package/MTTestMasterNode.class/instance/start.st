@@ -7,4 +7,4 @@ start
 	self performLocal.
 	slavesFuture waitForCompletion: self slaveTimeout.
 	testCase assert: slavesFuture isSuccess ]
-		ensure: [ slaves do: #kill ]
+		ensure: [ slaves do: #stop ]

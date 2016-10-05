@@ -10,7 +10,8 @@
 		"location",
 		"process",
 		"testClass",
-		"testSelector" ],
+		"testSelector",
+		"runner" ],
 	"name" : "MTTestSlaveRef",
 	"pools" : [
 		 ],

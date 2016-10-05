@@ -1,6 +1,6 @@
 tests-running
-testExpectedFailureRunIsSuccess
+testExpectedFailureRunIsFailure
 
 	| runFuture |
 	runFuture := self runInSlaveTest: #testExpectedFailure.
-	self assert: runFuture isSuccess.
+	self assert: runFuture isFailure.

@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	location := FileLocator workingDirectory / 'multitest' / UUID new asString
+	runner := TKTNewProcessTaskRunner new.
+	location := FileLocator workingDirectory / 'multitest' / UUID new asString.

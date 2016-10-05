@@ -2,8 +2,9 @@ tests
 testKilledSlaveIsNotRunning
 
 	| slave |
-	slave := MTTestSlaveRef id: #slave forTestCase: (MTMultiTestCaseForTest selector: #testLong).
+	slave := MTTestSlaveRef id: #slave forTestCase: (MTMultiTestCaseForTest selector: #testVeryLong).
 	slave run.
-	slave kill.
-	100 milliSeconds wait.
+	slave stop.
+	
+	slave waitForCompletion: 500 milliSeconds.
 	self deny: slave isRunning
