@@ -1,4 +1,12 @@
 activation
 activate
 	
-	"This command line handler is a mock command line handler that will continue the execution of the current thread."
+	| result |
+	result := self runTest.
+	result hasFailuresOrErrors
+		ifTrue: [ 
+			self log: 'Error: ', result asString.
+			self exitFailure: result asString ]
+		ifFalse: [ 
+			self log: 'Success'.
+			self exitSuccess ].

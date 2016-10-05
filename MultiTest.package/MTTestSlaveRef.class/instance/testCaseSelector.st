@@ -1,0 +1,4 @@
+accessing
+testCaseSelector
+	
+	^ testSelector asSymbol

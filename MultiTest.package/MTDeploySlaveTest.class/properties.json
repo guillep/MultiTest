@@ -1,0 +1,15 @@
+{
+	"category" : "MultiTest-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"node",
+		"slaveRef" ],
+	"name" : "MTDeploySlaveTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

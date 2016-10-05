@@ -1,17 +1,13 @@
 {
-	"category" : "MultiTest-Slave",
+	"category" : "MultiTest-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "GuillermoPolito 10/5/2016 16:12",
 	"instvars" : [
-		"location",
 		"id",
-		"testMaster",
-		"startedSemaphore",
-		"malvinaNode",
-		"masterRef" ],
+		"testMaster" ],
 	"name" : "MTTestSlaveNode",
 	"pools" : [
 		 ],

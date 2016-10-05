@@ -1,4 +1,4 @@
-forking-locations
+deployment
 vmLocation
 
 	^ self location / 'vm'

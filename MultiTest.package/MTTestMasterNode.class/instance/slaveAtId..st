@@ -1,9 +1,6 @@
-as yet unclassified
+accessing
 slaveAtId: anId
 
 	^ slaves
 		at: anId
-		ifAbsentPut: [ MTTestSlaveRef new
-								id: anId;
-								testMaster: self;
-								yourself ]
+		ifAbsentPut: [ MTTestSlaveRef id: anId forTestCase: testCase ]

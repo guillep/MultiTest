@@ -1,3 +1,5 @@
-accessing
+initialization
 currentNode
-	^ currentNode
+	^ currentNode ifNil: [ 
+		self beMasterNode.
+		currentNode ]

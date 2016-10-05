@@ -1,0 +1,1 @@
+I am a MultiTestCase used for testing. My test results are not correct: I have tests that fail and cause errors. These are on purpose to be able to test the MultiTest framework.

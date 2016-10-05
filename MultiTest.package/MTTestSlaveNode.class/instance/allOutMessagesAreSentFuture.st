@@ -1,4 +1,0 @@
-as yet unclassified
-allOutMessagesAreSentFuture
-
-	^ masterRef allOutMessagesAreSentFuture

@@ -1,0 +1,4 @@
+accessing
+slaveTimeout
+	
+	^ testCase slaveTimeout

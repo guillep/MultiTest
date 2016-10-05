@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "GuillermoPolito 10/5/2016 16:06",
 	"instvars" : [
-		"role",
-		"currentNode" ],
+		"currentNode",
+		"slaveTimeout" ],
 	"name" : "MTMultiTestCase",
 	"pools" : [
 		 ],

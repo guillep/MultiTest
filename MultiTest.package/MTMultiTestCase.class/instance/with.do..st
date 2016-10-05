@@ -1,4 +1,4 @@
-as yet unclassified
+configuration
 with: anImageID do: aBlock
 
-	^ currentNode with: anImageID do: aBlock
+	^ self currentNode with: anImageID do: aBlock

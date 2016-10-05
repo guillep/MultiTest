@@ -1,0 +1,4 @@
+tests
+testFail
+
+	self fail

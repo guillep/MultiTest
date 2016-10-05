@@ -1,4 +1,4 @@
-as yet unclassified
+running
 handleError: anException withResult: aResult
 
 	currentNode handleError: anException withResult: aResult.

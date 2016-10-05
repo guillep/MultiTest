@@ -1,4 +1,4 @@
-forking-locations
+deployment
 imageLocation
 
-	^ self location / 'image'
+	^ self location / 'image' , 'image'

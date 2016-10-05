@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 currentNode: aNode
 
 	currentNode := aNode

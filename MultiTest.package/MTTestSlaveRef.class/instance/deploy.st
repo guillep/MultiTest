@@ -1,8 +1,7 @@
-forking
+deployment
 deploy
 
-	^ ((self workerPool future: [ self cloneVM ])
-		collect: [ :value | self cloneImage ])
-			collect: [ :isFork |
-				isFork ifTrue: [ self installAsSlaveNode ].
-				isFork ]
+	WeakRegistry default add: self.
+	self ensureLocation.
+	self cloneVM.
+	self cloneImage.

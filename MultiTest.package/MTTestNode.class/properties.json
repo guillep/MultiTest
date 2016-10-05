@@ -4,14 +4,9 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "GuillermoPolito 10/5/2016 16:08",
 	"instvars" : [
-		"barriers",
-		"testMasterPort",
-		"deferredActions",
-		"outboxWorker",
-		"outMessages",
-		"workerPool" ],
+		 ],
 	"name" : "MTTestNode",
 	"pools" : [
 		 ],

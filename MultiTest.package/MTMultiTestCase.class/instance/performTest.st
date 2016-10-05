@@ -1,9 +1,5 @@
-as yet unclassified
+running
 performTest
 
-	[super performTest] ensure: [ | future |
-		TranscriptLogger runDuring: [
-			future := currentNode start.
-			future waitForCompletion: 2 minutes.
-			self deny: future isFailure.
-			currentNode assertSlavesFinishedSuccessfully ] ]
+	super performTest.
+	currentNode start.

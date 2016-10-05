@@ -1,0 +1,4 @@
+accessing
+testCaseName
+	
+	^ testClass name

@@ -1,4 +1,0 @@
-a
-keepSlavesAlive
-	
-	keepSlavesAlive := true

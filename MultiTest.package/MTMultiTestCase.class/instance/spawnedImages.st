@@ -1,4 +1,0 @@
-accessing
-spawnedImages
-	
-	^ currentNode spawnedImages

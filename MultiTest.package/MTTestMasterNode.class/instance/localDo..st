@@ -1,4 +1,4 @@
-deferred actions
+accessing
 localDo: aBlockClosure 
 	
 	deferredActions add: aBlockClosure

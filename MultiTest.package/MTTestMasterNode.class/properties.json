@@ -1,16 +1,14 @@
 {
-	"category" : "MultiTest-Master",
+	"category" : "MultiTest-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "GuillermoPolito 10/5/2016 16:10",
 	"instvars" : [
-		"network",
-		"server",
 		"slaves",
 		"testCase",
-		"keepSlavesAlive" ],
+		"deferredActions" ],
 	"name" : "MTTestMasterNode",
 	"pools" : [
 		 ],

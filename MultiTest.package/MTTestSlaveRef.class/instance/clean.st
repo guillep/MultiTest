@@ -1,0 +1,4 @@
+deployment
+clean
+	
+	location ensureDeleteAll

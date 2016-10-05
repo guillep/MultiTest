@@ -1,4 +1,7 @@
-forking
+deployment
 cloneImage
 
-	^ Smalltalk backupTo: self imageLocation fullName	
+	| isFork |
+	isFork := Smalltalk backupTo: (self imageLocation fullName copyUpToLast: $.).
+	isFork ifTrue: [ self recreateUIProcess ].
+	^ isFork

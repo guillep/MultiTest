@@ -1,0 +1,14 @@
+{
+	"category" : "MultiTest-TestsMocks",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GuillermoPolito 10/5/2016 16:04",
+	"instvars" : [
+		 ],
+	"name" : "MTMultiTestCaseForTest",
+	"pools" : [
+		 ],
+	"super" : "MTMultiTestCase",
+	"type" : "normal" }

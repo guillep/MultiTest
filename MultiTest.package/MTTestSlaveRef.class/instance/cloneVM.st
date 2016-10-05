@@ -1,13 +1,12 @@
-forking
+deployment
 cloneVM
-
-	self location ensureCreateDirectory.
-	self vmLocation ensureCreateDirectory.
 	
 	FileLocator vmDirectory resolve asAbsolute copyAllTo: self vmLocation resolve asAbsolute.
 	
-	OSSUnixSubprocess new
+	process := OSSUnixSubprocess new
 		command: 'chmod';
-		arguments: { '+x' . self vmBinary fullNameWithIndicator };
+		arguments: { '+x' . self vmBinaryLocation fullNameWithIndicator };
 		redirectStdout;
-		runAndWaitPollingEvery: 50 milliSeconds doing: [  ] onExitDo: []
+		runAndWaitPollingEvery: 50 milliSeconds doing: [  ] onExitDo: [].
+	
+	process isSuccess ifFalse: [ self error: 'Could not make VM executable' ].

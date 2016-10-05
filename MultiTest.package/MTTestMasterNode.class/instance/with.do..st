@@ -1,6 +1,4 @@
-as yet unclassified
+running
 with: anId do: aDeferredAction
 
-	^ (self slaveAtId: anId)
-		addDeferredAction: aDeferredAction;
-		yourself
+	self slaveAtId: anId

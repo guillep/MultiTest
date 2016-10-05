@@ -1,4 +1,4 @@
-as yet unclassified
+configuration
 defaultPort
 
 	^ 59260

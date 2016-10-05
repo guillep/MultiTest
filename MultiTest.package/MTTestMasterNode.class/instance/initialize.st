@@ -2,6 +2,5 @@ initialization
 initialize
 
 	super initialize.
-	keepSlavesAlive := false.
-	slaves := Dictionary new.
-	barriers := Dictionary new.
+	deferredActions := OrderedCollection new.
+	slaves := Dictionary new
