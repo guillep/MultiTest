@@ -1,6 +1,7 @@
 running
 spawn
 
+	| taskExecution |
 	process := OSSUnixSubprocess new
 		command: self vmBinaryLocation fullNameWithIndicator;
 		arguments: { 
@@ -11,7 +12,7 @@ spawn
 			self testCaseSelector asString.
 			id asString }.
 		
-	^ runner future: [ | result | 
+	taskExecution := [ | result | 
 		process
 			runAndWaitPollingEvery: 50 milliSeconds
 			retrievingStreams: true
@@ -19,4 +20,8 @@ spawn
 				result := command isSuccess
 					ifTrue: [ outString ]
 					ifFalse: [ self error: (errString ifEmpty: outString) ] ].
-		result ]
+		result ] asTask futureTaskExecutionFor: runner.
+	
+	runner scheduleTaskExecution: taskExecution.
+	scheduledTasks add: taskExecution.
+	^ taskExecution future.

@@ -11,7 +11,8 @@
 		"process",
 		"testClass",
 		"testSelector",
-		"runner" ],
+		"runner",
+		"scheduledTasks" ],
 	"name" : "MTTestSlaveRef",
 	"pools" : [
 		 ],
